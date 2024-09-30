@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size:15px;
+  font-family: 'Montserrat', Helvetica;
+  line-height:1;
+  nav {
+    ul {
+      li {
+        list-style:none;
+      }
+    }
+  }
+  a {
+    color:inherit;
+    text-decoration:none;
+    cursor:pointer;
+  }
+  hr {
+    height:2px;
+    display:block;
+  }
+  input, textarea {
+    width: 100%;
+    font-size:.75rem;
+    color:#222;
+    border-width:0 0 1px;
+    border-style:solid;
+    border-color:#e2e2e2;
+    border-radius: 0;
+    box-sizing:content-box;
+    appearance: none;
+    &::placeholder {
+      color:#999;
+    }
+  }
+  ul{
+    li{
+      list-style:none;
+    }
+  }
+}

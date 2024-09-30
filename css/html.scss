@@ -1,0 +1,62 @@
+// 캐릭터 인코딩을 utf파일로 설정
+@charset 'utf-8';
+//폰트페이스 링크
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+// 변수선언 $ -변수이름- : 할당할 값
+$primary:#a2b9bc;
+$secondary:#b2ad7f;
+// html 요소와 html 하위 요소들 모두 선택
+html, html *{
+  font-family:'S-CoreDream-3Light';
+  // 변수에 선언한 색상을 적용
+  color:$primary;
+}
+body{
+  line-height: 1.4;
+  // body의 자식인 h1 태그를 선택
+  h1{
+    font-size:40px;
+  }
+}
+// 상위선택자 < & >
+button{
+  background-color:sandybrown;
+  color:black;
+  border: none;
+  width:200px;
+  height:50px;
+  font-size:20px;
+  border-radius:10px;
+  &:hover{
+    background-color: salmon;
+  }
+}
+
+// 믹스인정의
+@mixin my-font{
+  font-family:sans-serif;
+  font-size:32px;
+  font-style: nomal;
+  font-weight:600;
+  color: orange;
+}
+// 믹스인 사용
+h1{
+  @include my-font;
+}
+// 믹스인 인자
+@mixin your-font($font-color, $bg-color){
+  font-size:18px;
+  font-weight:900;
+  color:$font-color;
+  background-color:$bg-color;
+}
+
+p{
+  @include your-font(blue, yellow);
+}
